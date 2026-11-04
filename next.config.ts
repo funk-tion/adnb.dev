@@ -10,10 +10,8 @@ function gitSha() {
 }
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  output: "export",
   agentRules: false,
-  cacheComponents: true,
-  partialPrefetching: true,
   env: {
     BUILD_SHA: gitSha(),
     BUILD_DATE: new Date().toISOString().slice(0, 10),

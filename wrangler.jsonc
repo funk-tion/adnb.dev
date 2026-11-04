@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers static assets: serves the `out/` folder produced by `next build`.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "adnb-dev",
+  "compatibility_date": "2026-11-03",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}

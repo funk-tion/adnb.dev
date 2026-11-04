@@ -18,6 +18,13 @@ npm run build
 - **Projects:** edit the list in `src/lib/projects.tsx`.
 - **Header links:** `src/lib/nav.ts`.
 
+## Deployment
+
+The site is a static export (`output: "export"` in `next.config.ts`), served from Cloudflare as static assets. `wrangler.jsonc` points at the `out/` folder, and `public/_headers` sets the response headers.
+
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+
 ## CI
 
 `.github/workflows/ci.yml` runs lint and build on pushes to `main` and on pull requests.
